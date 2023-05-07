@@ -1,0 +1,16 @@
+Opis realizacji projektu:
+
+    Do programu zostaly dodane instrukcje rzucajace wyjatki- throw. W tym celu zostaly dodane bloki
+try i catch, ktore sa ze soba powiazane. Do bloku try zostal wstawiony kod, ktory moze spowodowac blad,
+czyli wyjatek. Blok catch odpowiada za przechwycenie wyjatku, w nawiasie okraglym jest argument
+ewentualnego bledu, natamiast w bloku zostaly umieszczone informacje do uzytkownika na temat danego bledu.
+Zostal tez dodany do programu szablon, w ktorym T jest parametrem tego szablonu. Zostala umieszczona funkcja
+operator[] (jest to przeladowanie operatora). Celem tego jest mozliwosc poslugiwania sie szablonem
+tak jak zwykla tablica. Plik z komendami zostal odpowiednio utworzony by zaprezentowac nowe funkcjonalnosci
+programu. Dziala on tak, ze gdy argc, czyli liczba argumentow kompilacji jest wieksza od 1 oraz jesli plik
+jest otwarty, to w takim przypadku nastepuje czytanie z pliku. Dzieki uzyciu zmiennej statycznej,
+ID produktow sa unikalne pomiedzy magazynami. Wymagalo to tez odpowiedniej zmiany w funkcjach dodajacych
+i odejmujacych ilosc. Czesc pol w klasie Magazyn zostalo zmiennymi lokalnymi. W klasie Produkt zostala
+zdefiniowana funkcja wirtualna, ktora jest wywolywana przez wskaznik. Funkcja wirtualna jest nadpisywana
+w klasie pochodnej. W klasie Magazyn mojvector przechowuje wskazniki na Produkt. W tej samej klasie jest
+obecny konstruktor kopiujacy i operator przypisania.
