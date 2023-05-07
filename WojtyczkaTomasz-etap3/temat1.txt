@@ -1,5 +1,60 @@
 Opis realizacji projektu:
 
+Etap 1:
+Projekt został rozpoczęty od utworzenia pliku nagłówkowego Towar.h oraz pliku
+źródłowego Towar.cpp. W pliku nagłówkowym została utworzona klasa Towar z
+atrybutami tej klasy, a także metodami. Klasa ta reprezentuje towar wraz z
+jego ID, nazwą towaru i liczbą sztuk. Zostały też utworzone pliki: nagłówkowy
+i źródłowy odnoszące się do klasy Magazyn, w której został umieszczony std::vector
+obiektów typu Towar. Tworząc std::vector obiektów typu Towar należało również
+pamiętać o zaimplementowaniu odpowiedniego pliku nagłówkowego (#include <vector>).
+Również przy tworzeniu plików źródłowych Towar.cpp i Magazyn.cpp należało pamiętać
+o wpisaniu odpowiednich komend (#include „nazwa pliku nagłówkowego, w którym jest
+klasa”) ponieważ w przeciwnym razie plik źródłowy nie miałby informacji o istnieniu
+pliku nagłówkowego z klasą. 
+       Przy pisaniu metod, należy również zwrócić uwagę na zastosowanie konstruktora
+i destruktora, a także zastosowanie wartości domyślnych, z których przy tworzeniu
+nowego obiektu odpowiednie atrybuty będą mieć odpowiednie wartości domyślne,  w
+przeciwieństwie do niepożądanych wartości z pamięci RAM. Można również wspomnieć,
+że przy atrybucie nazwa_towaru, nie została wpisana wartość domyślna, ponieważ
+jest ona typu string, w przeciwieństwie do wartości typu int. W pliku Magazyn.cpp
+zostały zaimplementowane procedury związane z wypełnianiem vectora, wypisywaniem
+vectora oraz dodawaniem i odejmowaniem liczby sztuk w obiektach. W tych procedurach
+również zostały zastosowane odpowiednie rozwiązania zapobiegające wprowadzeniu
+przez użytkownika nieodpowiednich wartości. 
+       W pliku main.cpp zostały napisane następujące komendy: #include „Towar.h”,
+#include „Magazyn.h”. W funkcji main na początku został utworzony obiekt, który
+jest reprezentantem klasy Magazyn, a następnie zostały wywołane funkcje, które są
+składowymi klasy. Następnie w odpowiedni sposób została stworzona pętla, w której
+znajduje się switch, dzięki któremu użytkownik może w odpowiedni dla siebie sposób
+nawigować po opcjach, które zawierają w sobie funkcje (składowe klasy). Za pomocą
+tych opcji może dodawać lub odejmować ilość sztuk i po skończeniu tych aktywności,
+zakończyć działanie programu. Dzięki zastosowaniu wszystkich wyżej wynienionych metod
+program na początku prosi użytkownika o wprowadzenie ilości towarów, jaką użytkownik
+chce dodać, gdy doda liczbę mniejszą od 1, proszony jest o ponowne wprowadzenie liczby.
+Następnie użytkownik musi wprowadzić nazwy towarów jakie chce dodać. Po podaniu nazw
+wyświetlają się poszczególne towary wraz z ich ID, nazwami, które chwilę wcześniej
+użytkownik wprowadził i liczbami sztuk. Ma też możliwość dodania liczby sztuk towarów i
+odjęcia. Gdy zdecyduje się na jedną z tych opcji, musi kolejno wprowadzić ID towaru, w
+którym chce te sztuki dodać lub odjąć i następnie musi wprowadzić liczbę dodawanych lub
+odejmowanych sztuk. Gdy przy wprowadzaniu ID lub liczby sztuk wprowadzi niepożądaną 
+liczbę, zostanie poproszony o ponowne wprowadzenie tej wartości. Po zakończeniu tego
+procesu zostanie wyświetlona nowa tabela ze zaktualizowanymi wartościami oraz ponownie
+będzie wybór pomiędzy trzema wymienionymi wcześniej opcjami. Jeśli natomiast użytkownik
+chce zakończyć działanie programu, wybiera opcje trzecią i działanie programu zostaje
+zakończone.
+
+Etap 2:
+Została utworzona klasa Siec_magazynow, która dziedziczy publicznie po klasie magazyn
+i która posiada vector magazynów. Posiada ona metodę dodajmagazyn(), dzięki której użytkownik
+może dodać odpowiednią ilość magazynów do vectora, a następnie
+dzięki metodzie wypiszmagazyny() wypisuje użytkownikowi dodane przez niego magazyny.
+Metoda wybormagazynu pozwala użytkownikowi wybrać odpowiedni magazyn, który chce edytować.
+Pojawiły się też nowe klasy, które dziedziczą po klasie Produkt i
+pozwalają na dodanie do magazynu odpowiednich typów towarów, a także dodawanie ich ilości i 
+odejmowanie.
+
+Etap 3:
     Do programu zostaly dodane instrukcje rzucajace wyjatki- throw. W tym celu zostaly dodane bloki
 try i catch, ktore sa ze soba powiazane. Do bloku try zostal wstawiony kod, ktory moze spowodowac blad,
 czyli wyjatek. Blok catch odpowiada za przechwycenie wyjatku, w nawiasie okraglym jest argument
